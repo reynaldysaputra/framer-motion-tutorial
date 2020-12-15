@@ -24,3 +24,20 @@ export const animationText = {
     initial:{x : '-100vh'},
     animate:{x : 0, transition:{type:'spring', stiffness:150}},
   }
+
+  export const animationContainer2 = {
+    hidden:{x:'100vw'},
+    visible:{x:0, 
+        transition:{
+          type:'spring', 
+          mass:1, 
+          when:'beforeChildren',
+          staggerChildren : 0.5
+        }
+    }
+  }
+  
+  export const animationChildren2 = {
+    hidden : {opacity : 0},
+    visible : {opacity : 1}
+  }

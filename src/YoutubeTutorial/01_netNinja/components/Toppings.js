@@ -1,13 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion';
-import { animationText } from './animate';
+import { animationContainer, animationText } from './animate';
 
 const Toppings = ({ addTopping, pizza }) => {
   let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
 
   return (
-    <div className="toppings container">
+    <motion.div 
+      className="toppings container"       
+      initial='initial'
+      animate='animate'
+      variants={animationContainer}
+    >
       
       <h3>Step 2: Choose Toppings</h3>
       <ul>
@@ -31,7 +36,7 @@ const Toppings = ({ addTopping, pizza }) => {
         </button>
       </Link>
 
-    </div>
+    </motion.div>
   )
 }
 
