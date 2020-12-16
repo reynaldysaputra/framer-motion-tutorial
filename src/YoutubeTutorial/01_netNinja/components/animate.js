@@ -66,7 +66,8 @@ export const animationText = {
 
   export const animationContainer2 = {
     hidden:{x:'100vw'},
-    visible:{x:0, 
+    visible:{
+        x:0, 
         transition:{
           type:'spring', 
           mass:1, 

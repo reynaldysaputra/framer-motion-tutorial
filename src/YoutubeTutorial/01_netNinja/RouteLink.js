@@ -6,9 +6,12 @@ import Base from './components/Base';
 import Toppings from './components/Toppings';
 import Order from './components/Order';
 import { AnimatePresence } from 'framer-motion';
+import Modal from './components/Modal';
+
 
 function App() {
   const [pizza, setPizza] = useState({ base: "", toppings: [] });
+  const [showModal, setShowModal] = useState(false);
   const lokasi = useLocation();
 
   const addBase = (base) => {
@@ -27,8 +30,11 @@ function App() {
 
   return (
     <Fragment>
+      {/* Modal in here !!! */}
+      <Modal showModal={showModal} setShowModal={setShowModal}/>
+
       <Header />
-      <AnimatePresence exitBeforeEnter custom={lokasi}>
+      <AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(showModal => showModal = false)} custom={lokasi}>
         <Switch location={lokasi} key={lokasi.key}>
           <Route path="/base">
             <Base addBase={addBase} pizza={pizza} location={lokasi} />
@@ -37,7 +43,7 @@ function App() {
             <Toppings addTopping={addTopping} pizza={pizza} location={lokasi} />
           </Route>
           <Route path="/order">
-            <Order pizza={pizza} location={lokasi} />
+            <Order pizza={pizza} location={lokasi} setShowModal={setShowModal} />
           </Route>
           <Route path="/" >
             <Home location={lokasi} />
