@@ -106,3 +106,60 @@ export const animationText = {
       }
     }
   }
+
+  export const animationSVG = {
+    initial : {
+      opacity : 0,
+      scale : 0
+    },
+    visible : {
+      opacity : 1,
+      scale : 1,
+      transition : {
+        duration : .5
+      }
+    }
+  }
+
+  export const animationSVGPath = {
+    initial : {
+      opacity : 0,
+      pathLength : 0
+    },
+    visible : {
+      opacity : 1,
+      pathLength : 1,
+      transition : {
+        duration : .9,
+        type : 'easeInOut'
+      }
+    }
+  }
+
+  export const animationLoader = {
+    animationOne : {
+      x : [-20, -50],
+      y : [0, -30],
+      transition : {
+        x : {
+          yoyo : Infinity,
+          duration : .5
+        },
+        y : {
+          yoyo : Infinity,
+          duration : .25,
+          type : 'easeOut'
+        }
+      }
+    },
+    animationTwo : {
+      x : [-50, 0],
+      y : 0,
+      transition : {
+        x : {
+          yoyo : Infinity, 
+          duration : .4
+        }
+      }
+    }
+  }
