@@ -7,10 +7,11 @@ import Application_1 from './MeTutorial/01_Animation/01_app';
 import DynamicVariant from './MeTutorial/01_Animation/02_dynamicVariant';
 import AnimationControl from './MeTutorial/01_Animation/03_AnimationControl';
 import Containers from './MeTutorial/01_Animation/container';
+import Applications from './StudiKasus/01_scrollEffect(1)/app';
 
 ReactDOM.render(
   <React.StrictMode>
-      <Containers />
+      <Applications />
   </React.StrictMode>,
   document.getElementById('root')
 );

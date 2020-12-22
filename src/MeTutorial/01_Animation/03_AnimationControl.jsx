@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import {motion, useAnimation} from 'framer-motion';
 import { Fragment } from 'react';
 
@@ -11,7 +11,7 @@ function AnimationControl(){
             transition: {
                 yoyo : Infinity,
                 duration : 1
-            }
+            },
         })
     }
 
