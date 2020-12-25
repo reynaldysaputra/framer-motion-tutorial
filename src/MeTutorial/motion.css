@@ -1,3 +1,7 @@
+body {
+    position: relative !important;
+}
+
 .container {
     width: 100%;
     display: grid;
@@ -117,4 +121,35 @@ button {
     border: 3px solid black;
     overflow-y: scroll;
     position: relative;
+}
+
+.modal {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.397);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentModal {
+    width: 400px;
+    padding: 10px; 
+    position: relative;
+    z-index: 999999;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.contentModal h1 {
+    color: black;
+}
+
+.contentModal button {
+    color: black;
+    border: 1px solid black;
 }

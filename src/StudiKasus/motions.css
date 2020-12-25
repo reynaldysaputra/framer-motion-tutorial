@@ -1,0 +1,20 @@
+.containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.figureBox {
+    width: 400px;
+    height: 300px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.figureBox img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
